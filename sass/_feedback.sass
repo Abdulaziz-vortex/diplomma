@@ -1,0 +1,48 @@
+.feedback
+	padding: 94px 0
+	background: url("../img/feedback/feedback-bg.jpg") no-repeat center right -40%
+.form
+	max-width: 575px
+	&__title
+		margin-bottom: 45px
+		font-size: 24px
+		+bold
+		line-height: 35px
+	&__subtitle
+		display: block
+		margin-bottom: 50px
+	&__input
+		width: 270px
+		margin-bottom: 30px
+		&:first-child
+			margin-right: 30px
+	&__button
+		display: block
+		width: 100%
+		padding: 28px
+		margin-bottom: 30px
+		font-size: 16px
+	&__footer
+		display: flex
+		justify-content: space-between
+		font-size: 15px
+		line-height: 24px
+		&-text
+			max-width: 224px
+		&-contacts
+			position: relative
+			margin-right: 15px
+			&:before
+				content: ""
+				display: block
+				position: absolute
+				top: 5px
+				left: -55px
+				width: 40px
+				height: 40px
+				background: url(../img/feedback/phone.png) center no-repeat
+			.form-phone
+				display: block
+				text-decoration: none
+				color: $text-color
+				+bold
