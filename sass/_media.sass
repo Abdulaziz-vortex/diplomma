@@ -1,6 +1,9 @@
 @media (max-width: 1199px)
 	.container
 		width: 970px
+	.main
+		&-image
+			transform: none
 	.feedback
 		&:after
 			content: none
@@ -26,35 +29,28 @@
 	.container
 		width: 95%
 	.main
+		padding: 25px 0
 		&-wrap
 			flex-direction: column
 		&-text
 			max-width: 400px
 			margin: auto
-			margin-bottom: 60px
+			margin-bottom: 30px
 			&__title
+				margin-bottom: 25px
 				text-align: center
+		&-advantages__img
+			margin-right: 15px
 		&-image
 			img
 				display: block
 				margin: 0 auto
-
-@media (max-width: 576px)
-	.header
-		padding: 15px 0
-		&-wrap
-			flex-direction: column
-		&-text
-			flex-direction: column
-			&__contacts
-				margin: 20px 0
-				margin-right: 0
-				text-align: center
-	.main-advantages
-		padding: 0 15px
 	.feedback
-		padding: 60px 0
+		padding: 25px 0
 		.form
+			&__title,
+			&__subtitle
+				margin-bottom: 25px
 			&__input,
 			&__button
 				display: block
@@ -74,3 +70,22 @@
 					text-align: center
 					&:before
 						content: none
+
+@media (max-width: 576px)
+	.header
+		padding: 15px 0
+		&-wrap
+			flex-direction: column
+		&-text
+			flex-direction: column
+			&__contacts
+				margin: 20px 0
+				margin-right: 0
+				text-align: center
+	.main-advantages
+		padding: 0 15px
+		&__item
+			&:last-child
+				margin-bottom: 0
+	.main-text__title
+		font-size: 25px

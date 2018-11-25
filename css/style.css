@@ -446,7 +446,7 @@ template {
 
 .main-text__title {
   margin-bottom: 50px;
-  margin-top: 20px;
+  margin-top: 0;
   font-size: 41px;
   font-family: "Museo Sans Bold",sans-serif;
   line-height: 55px;
@@ -461,6 +461,12 @@ template {
 .main-image {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  position: relative;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  z-index: 10;
 }
 
 .main-advantages {
@@ -605,6 +611,7 @@ template {
 body {
   font-family: "Museo Sans Light", sans-serif;
   color: #333;
+  overflow-x: hidden;
 }
 
 .container {
@@ -619,6 +626,10 @@ img {
 @media (max-width: 1199px) {
   .container {
     width: 970px;
+  }
+  .main-image {
+    -webkit-transform: none;
+            transform: none;
   }
   .feedback:after {
     content: none;
@@ -651,6 +662,9 @@ img {
   .container {
     width: 95%;
   }
+  .main {
+    padding: 25px 0;
+  }
   .main-wrap {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -660,43 +674,24 @@ img {
   .main-text {
     max-width: 400px;
     margin: auto;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
   .main-text__title {
+    margin-bottom: 25px;
     text-align: center;
+  }
+  .main-advantages__img {
+    margin-right: 15px;
   }
   .main-image img {
     display: block;
     margin: 0 auto;
   }
-}
-
-@media (max-width: 576px) {
-  .header {
-    padding: 15px 0;
-  }
-  .header-wrap {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .header-text {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .header-text__contacts {
-    margin: 20px 0;
-    margin-right: 0;
-    text-align: center;
-  }
-  .main-advantages {
-    padding: 0 15px;
-  }
   .feedback {
-    padding: 60px 0;
+    padding: 25px 0;
+  }
+  .feedback .form__title, .feedback .form__subtitle {
+    margin-bottom: 25px;
   }
   .feedback .form__input, .feedback .form__button {
     display: block;
@@ -726,6 +721,38 @@ img {
   }
   .feedback .form__footer-contacts:before {
     content: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 15px 0;
+  }
+  .header-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header-text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header-text__contacts {
+    margin: 20px 0;
+    margin-right: 0;
+    text-align: center;
+  }
+  .main-advantages {
+    padding: 0 15px;
+  }
+  .main-advantages__item:last-child {
+    margin-bottom: 0;
+  }
+  .main-text__title {
+    font-size: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */

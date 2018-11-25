@@ -7,7 +7,7 @@
 		flex-basis: 50%
 		&__title
 			margin-bottom: 50px
-			margin-top: 20px
+			margin-top: 0
 			font-size: 41px
 			+bold
 			line-height: 55px
@@ -17,6 +17,11 @@
 				font-size: 20px
 	&-image
 		flex-basis: 50%
+		position: relative
+		transform-origin: top left
+		transform: scale(1.4)
+		z-index: 10
+			
 	&-advantages
 		display: flex
 		flex-direction: column
