@@ -460,8 +460,8 @@ template {
 }
 
 .main-image {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
   position: relative;
   -webkit-transform-origin: top left;
           transform-origin: top left;
@@ -474,6 +474,8 @@ template {
   -webkit-box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05);
           box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05);
   position: absolute;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   left: 51.8%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -635,6 +637,13 @@ img {
 
 .none {
   display: none;
+}
+
+@media (min-width: 1200px) {
+  .main-image {
+    -webkit-transform: none;
+            transform: none;
+  }
 }
 
 @media (max-width: 1199px) {
