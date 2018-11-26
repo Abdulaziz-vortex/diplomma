@@ -476,7 +476,7 @@ template {
   position: absolute;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  left: 61%;
+  left: 60%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
