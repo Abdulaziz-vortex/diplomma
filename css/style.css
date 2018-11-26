@@ -473,6 +473,10 @@ template {
 .main-image img {
   -webkit-box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05);
           box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.05), 16px 22px 35px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  left: 51.8%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .main-advantages {
@@ -633,13 +637,6 @@ img {
   display: none;
 }
 
-@media (min-width: 1367px) {
-  .main-image {
-    -webkit-transform: none;
-            transform: none;
-  }
-}
-
 @media (max-width: 1199px) {
   .container {
     width: 970px;
@@ -701,6 +698,10 @@ img {
     margin-right: 15px;
   }
   .main-image img {
+    position: relative;
+    left: inherit;
+    -webkit-transform: none;
+            transform: none;
     display: block;
     margin: 0 auto;
     -webkit-box-shadow: none;
