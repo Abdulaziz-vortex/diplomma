@@ -429,7 +429,6 @@ template {
 }
 
 .main {
-  width: 100vw;
   padding: 60px 0;
   background-color: #f5f5f5;
 }
@@ -615,6 +614,178 @@ template {
   font-family: "Museo Sans Bold",sans-serif;
 }
 
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.52);
+  z-index: 99;
+}
+
+.modal__dialog {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1170px;
+  max-height: 674px;
+  margin: auto;
+  background-color: #fff;
+}
+
+.modal__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.modal__close:hover {
+  cursor: pointer;
+}
+
+.modal_hidden {
+  display: none;
+}
+
+.modal_visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-info {
+  width: 600px;
+  padding: 87px 113px 75px 74px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #f7f7f7;
+}
+
+.modal-info-list {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 50px;
+  list-style-type: none;
+}
+
+.modal-info-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.modal-info-list__item .list__item-img {
+  margin-right: 28px;
+}
+
+.modal-info-list__item .list__item-text-title {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.modal-info-list__item .list__item-text-title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -13px;
+  width: 42px;
+  height: 2px;
+  background: #ffd200;
+}
+
+.modal-info-list__item .list__item-text-size {
+  margin-bottom: 5px;
+}
+
+.modal-info-list__item .list__item-text-size .bold-size {
+  font-family: "Museo Sans Bold",sans-serif;
+}
+
+.modal-info-title {
+  font-family: "Museo Sans Bold",sans-serif;
+}
+
+.modal-info-inPrice {
+  padding-left: 17px;
+  list-style-type: none;
+}
+
+.modal-info-inPrice__item {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.modal-info-inPrice__item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  left: -17px;
+  top: 5px;
+  background: #ffd200;
+  border-radius: 50%;
+}
+
+.modal-form {
+  padding: 80px 100px 75px 100px;
+  background: #fff;
+}
+
+.modal-form form {
+  max-width: 370px;
+  margin: 0 auto;
+}
+
+.modal-form__title {
+  width: 291px;
+  margin: 0 auto;
+  margin-bottom: 37px;
+  font-size: 22px;
+  line-height: 33px;
+  text-align: center;
+  font-family: "Museo Sans Bold",sans-serif;
+}
+
+.modal-form__subtitle {
+  margin-bottom: 41px;
+  font-size: 16px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.modal-form .form__footer-contacts {
+  width: 275px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.modal-form .form__footer-contacts:before {
+  content: none;
+}
+
+.modal-input {
+  width: 370px;
+  padding: 23px;
+  margin-bottom: 15px;
+}
+
+.modal-button {
+  width: 370px;
+  margin-top: 15px;
+}
+
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -623,6 +794,7 @@ template {
 body {
   font-family: "Museo Sans Light", sans-serif;
   color: #333;
+  font-size: 14px;
   overflow-x: hidden;
 }
 
@@ -663,6 +835,13 @@ img {
   .form__title, .form__subtitle {
     text-align: center;
   }
+  .modal-info {
+    width: 500px;
+    padding: 40px 50px 40px 40px;
+  }
+  .modal-form {
+    padding: 40px 50px 40px 50px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -675,6 +854,31 @@ img {
   }
   .feedback {
     background: #fff;
+  }
+  .modal-info {
+    width: 400px;
+    padding: 15px 0 0 30px;
+  }
+  .modal-info-list {
+    margin-bottom: 0;
+  }
+  .modal-form {
+    width: 320px;
+    padding: 15px;
+  }
+  .modal-form__title {
+    margin-bottom: 15px;
+  }
+  .modal-form__subtitle {
+    width: 256px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  .modal-input {
+    width: 290px;
+  }
+  .modal-button {
+    width: 290px;
   }
 }
 
@@ -750,6 +954,24 @@ img {
   }
   .feedback .form__footer-contacts:before {
     content: none;
+  }
+  .modal__dialog {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: auto;
+  }
+  .modal-form {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .modal-form__subtitle {
+    line-height: 20px;
   }
 }
 

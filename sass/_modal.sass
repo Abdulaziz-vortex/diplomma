@@ -1,0 +1,111 @@
+.modal
+	position: fixed
+	left: 0
+	top: 0
+	display: flex
+	width: 100%
+	height: 100%
+	background-color: rgba(#000, 0.52)
+	z-index: 99
+	&__dialog
+		position: relative
+		display: flex
+		max-width: 1170px
+		max-height: 674px
+		margin: auto
+		background-color: #fff
+	&__close
+		position: absolute
+		top: 15px
+		right: 15px
+		&:hover
+			cursor: pointer	
+	&_hidden
+		display: none
+	&_visible
+		display: flex
+	&-info
+		width: 600px
+		padding: 87px 113px 75px 74px
+		box-sizing: border-box
+		background: $modal-block-bg
+	&-info-list
+		padding: 0
+		margin-top: 0
+		margin-bottom: 50px
+		list-style-type: none
+		&__item
+			display: flex
+			align-items: center
+			margin-bottom: 15px
+			.list__item
+				&-img
+					margin-right: 28px
+				&-text
+					&-title
+						position: relative
+						margin-top: 0
+						margin-bottom: 25px
+						font-size: 16px
+						&:after
+							content: ""
+							display: block
+							position: absolute
+							bottom: -13px
+							width: 42px
+							height: 2px
+							background: $primary-color
+					&-size
+						margin-bottom: 5px
+						.bold-size
+							+bold
+	&-info-title
+		+bold
+	&-info-inPrice
+		padding-left: 17px
+		list-style-type: none
+		&__item
+			position: relative
+			margin-bottom: 5px
+			&:before
+				content: ""
+				display: block
+				position: absolute
+				width: 7px
+				height: 7px
+				left: -17px
+				top: 5px
+				background: $primary-color
+				border-radius: 50%
+	&-form
+		padding: 80px 100px 75px 100px
+		background: $white
+		form
+			max-width: 370px
+			margin: 0 auto
+		&__title
+			width: 291px
+			margin: 0 auto
+			margin-bottom: 37px
+			font-size: 22px
+			line-height: 33px
+			text-align: center
+			+bold
+		&__subtitle
+			margin-bottom: 41px
+			font-size: 16px
+			line-height: 35px
+			text-align: center
+		.form__footer-contacts
+			width: 275px
+			margin: 0 auto
+			text-align: center
+			&:before
+				content: none
+	&-input
+		width: 370px
+		padding: 23px
+		margin-bottom: 15px
+	&-button
+		width: 370px
+		margin-top: 15px
