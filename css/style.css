@@ -640,8 +640,8 @@ template {
 
 .modal__close {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 10px;
+  right: 10px;
 }
 
 .modal__close:hover {
@@ -836,7 +836,7 @@ img {
     text-align: center;
   }
   .modal-info {
-    width: 500px;
+    max-width: 500px;
     padding: 40px 50px 40px 40px;
   }
   .modal-form {
@@ -855,8 +855,12 @@ img {
   .feedback {
     background: #fff;
   }
+  .modal__close {
+    top: 5px;
+    right: 5px;
+  }
   .modal-info {
-    width: 400px;
+    max-width: 400px;
     padding: 15px 0 0 30px;
   }
   .modal-info-list {
@@ -1004,6 +1008,17 @@ img {
   }
   .main-text__title {
     font-size: 25px;
+  }
+  .modal-info {
+    display: block;
+    width: auto;
+    padding: 20px;
+  }
+  .modal-info-title {
+    text-align: center;
+  }
+  .modal .list__item-img {
+    margin-right: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
