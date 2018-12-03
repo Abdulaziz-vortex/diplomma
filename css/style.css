@@ -684,6 +684,7 @@ template {
 }
 
 .modal-info-list__item .list__item-img {
+  min-width: 120px;
   margin-right: 28px;
 }
 
@@ -856,19 +857,20 @@ img {
     background: #fff;
   }
   .modal__close {
-    top: 5px;
-    right: 5px;
+    top: 15px;
+    right: 15px;
   }
   .modal-info {
     max-width: 400px;
-    padding: 15px 0 0 30px;
+    padding: 40px 0 40px 40px;
   }
   .modal-info-list {
     margin-bottom: 0;
   }
   .modal-form {
-    width: 320px;
-    padding: 15px;
+    width: 380px;
+    padding: 40px;
+    text-align: center;
   }
   .modal-form__title {
     margin-bottom: 15px;
@@ -883,6 +885,7 @@ img {
   }
   .modal-button {
     width: 290px;
+    margin: 15px auto;
   }
 }
 
@@ -968,6 +971,7 @@ img {
         -ms-flex-align: center;
             align-items: center;
     overflow: auto;
+    height: 100%;
   }
   .modal-form {
     -webkit-box-ordinal-group: 0;
@@ -1012,13 +1016,74 @@ img {
   .modal-info {
     display: block;
     width: auto;
-    padding: 20px;
+    padding: 40px;
   }
   .modal-info-title {
     text-align: center;
   }
+  .modal-info-inPrice {
+    text-align: justify;
+  }
   .modal .list__item-img {
     margin-right: 15px;
+  }
+}
+
+@media (max-width: 430px) {
+  .input {
+    padding: 15px;
+  }
+  .form__button {
+    padding: 15px;
+  }
+  .modal__dialog {
+    width: 290px;
+  }
+  .modal-form {
+    width: 290px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .modal-form__title {
+    width: 240px;
+    line-height: 24px;
+  }
+  .modal-form .form__footer-contacts {
+    width: 260px;
+  }
+  .modal .form__button {
+    padding: 15px;
+  }
+  .modal-button {
+    margin-top: 0;
+  }
+  .modal-input, .modal-button {
+    display: block;
+    width: 260px;
+    margin: 0 auto;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  .modal .list__item-img {
+    min-width: 80px;
+  }
+  .modal .list__item-img img {
+    width: 80px;
+  }
+  .modal-info {
+    padding: 20px;
+  }
+  .modal-info-list__item {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .modal-info-list__item .list__item-text-title {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .modal-info-list__item .list__item-text-title:after {
+    bottom: -4px;
   }
 }
 /*# sourceMappingURL=style.css.map */
