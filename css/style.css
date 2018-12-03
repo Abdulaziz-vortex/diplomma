@@ -870,7 +870,6 @@ img {
 }
 
 .section-title_center {
-  max-width: 575px;
   margin: 0 auto;
   margin-bottom: 93px;
   text-align: center;
@@ -930,6 +929,9 @@ img {
   }
   .feedback {
     background: #fff;
+  }
+  .portfolio .section-title_center {
+    max-width: 575px;
   }
   .modal__close {
     top: 15px;
