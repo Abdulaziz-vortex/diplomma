@@ -15,6 +15,13 @@
 		margin: 0 auto
 		&__title,&__subtitle
 			text-align: center
+	.portfolio
+		&:before
+			width: 100%
+	.slider
+		&__item
+			max-width: 95%
+			margin: 0 10px
 	.modal
 		&-info
 			max-width: 500px
@@ -108,6 +115,14 @@
 					text-align: center
 					&:before
 						content: none
+	.portfolio
+		padding: 45px 0 100px 0
+		.section-title
+			&_center
+				margin-bottom: 35px
+				line-height: 35px
+		.arrow
+			bottom: -45px
 	.modal
 		&__dialog
 			flex-direction: column
@@ -190,3 +205,6 @@
 				font-size: 14px
 				&:after
 					bottom: -4px
+	.portfolio
+		.section-title
+			font-size: 25px

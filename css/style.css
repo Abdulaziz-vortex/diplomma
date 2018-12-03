@@ -614,6 +614,61 @@ template {
   font-family: "Museo Sans Bold",sans-serif;
 }
 
+.portfolio {
+  position: relative;
+  padding: 66px 0 187px 0;
+  background: #f5f5f5;
+  z-index: 1;
+}
+
+.portfolio:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 59%;
+  height: 100%;
+  background: url(../img/portfolio/portfolio-bg.png) no-repeat center left;
+  background-size: cover;
+  z-index: -1;
+}
+
+.slider__item {
+  text-align: center;
+  outline: none;
+}
+
+.slider__item img {
+  margin: auto;
+}
+
+.arrow {
+  position: absolute;
+  bottom: -87px;
+  width: 45px;
+  height: 19px;
+  margin-top: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.arrow_right {
+  left: 50%;
+  background: url("../img/arrow-right.png") no-repeat center;
+  background-size: 100%;
+  -webkit-transform: translateX(15px);
+          transform: translateX(15px);
+}
+
+.arrow_left {
+  left: 50%;
+  margin-left: -15px;
+  background: url("../img/arrow-left.png") no-repeat center;
+  background-size: 100%;
+  -webkit-transform: translateX(-45px);
+          transform: translateX(-45px);
+}
+
 .modal {
   position: fixed;
   left: 0;
@@ -808,6 +863,19 @@ img {
   max-width: 100%;
 }
 
+.section-title {
+  font-size: 30px;
+  font-family: "Museo Sans Bold",sans-serif;
+  line-height: 45px;
+}
+
+.section-title_center {
+  max-width: 575px;
+  margin: 0 auto;
+  margin-bottom: 93px;
+  text-align: center;
+}
+
 .none {
   display: none;
 }
@@ -835,6 +903,13 @@ img {
   }
   .form__title, .form__subtitle {
     text-align: center;
+  }
+  .portfolio:before {
+    width: 100%;
+  }
+  .slider__item {
+    max-width: 95%;
+    margin: 0 10px;
   }
   .modal-info {
     max-width: 500px;
@@ -962,6 +1037,16 @@ img {
   .feedback .form__footer-contacts:before {
     content: none;
   }
+  .portfolio {
+    padding: 45px 0 100px 0;
+  }
+  .portfolio .section-title_center {
+    margin-bottom: 35px;
+    line-height: 35px;
+  }
+  .portfolio .arrow {
+    bottom: -45px;
+  }
   .modal__dialog {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1084,6 +1169,9 @@ img {
   }
   .modal-info-list__item .list__item-text-title:after {
     bottom: -4px;
+  }
+  .portfolio .section-title {
+    font-size: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */
