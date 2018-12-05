@@ -37,4 +37,28 @@ $(document).ready(function () {
 			}
 		]
 	});
+
+	/* отправка формы */
+	$(".js-ajax").submit(function(event) {
+		event.preventDefault();
+		$.ajax({
+			type: "POST",
+			url: "/mailer/smart.php",
+			data: $(this).serialize(),
+		}).done(function() {
+				$(this).find("input").val("");
+				alert("Ваша заявка принята");
+				$(".js-ajax").trigger("reset");
+			});
+		return false;
+	});
+
 }); /* end document */
+
+
+/*
+.done(function() {
+			$(this).find("input").val("");
+			alert("Ваша заявка принята");
+			$(".js-ajax").trigger("reset");
+		});*/

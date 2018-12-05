@@ -67,7 +67,28 @@
 		&-button
 			width: 290px
 			margin: 15px auto
-
+	.calculation
+		background-position: bottom
+		padding: 20px 0
+		&-title
+			margin-bottom: 20px
+			text-align: center
+		&-subtitle
+			margin-bottom: 30px
+			text-align: center
+		&:before
+			width: 100%
+			height: 50%
+		&-wrap
+			flex-direction: column
+			align-items: center
+		&-form
+			max-width: 500px
+			padding-top: 50px
+			padding-left: 0
+			.modal-input,
+			.modal-button
+				width: 100%
 @media (max-width: 768px)
 	.hidden-xs
 		display: none
@@ -137,6 +158,10 @@
 			order: -1
 			&__subtitle
 				line-height: 20px
+	.calculation
+		&-form
+			max-width: 310px
+			padding-left: 0
 
 @media (max-width: 576px)
 	.header
@@ -167,7 +192,23 @@
 				text-align: justify
 		.list__item-img
 			margin-right: 15px
-
+	.calculation
+		&:before
+			height: 54%
+		.container
+			width: 320px
+			padding: 0 10px
+		&-title
+			font-size: 18px
+			line-height: 23px
+		&-list
+			&__item
+				&:before
+					left: -32px
+					top: 0
+		.modal-form
+			&__title
+				font-size: 18px
 @media (max-width: 430px)
 	.input
 		padding: 15px
@@ -212,3 +253,9 @@
 	.portfolio
 		.section-title
 			font-size: 25px
+	.calculation
+		&:before
+			height: 57%
+		&-form 
+			.modal-form__title
+				width: auto

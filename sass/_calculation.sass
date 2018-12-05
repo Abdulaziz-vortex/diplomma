@@ -1,0 +1,74 @@
+.calculation
+	position: relative
+	padding: 77px 0 67px 0
+	background: url("../img/calculation-bg.jpg") no-repeat top right
+	background-size: cover
+	z-index: 0
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+		width: 55%
+		height: 100%
+		background: $calculation-bg
+		z-index: -1
+	&-wrap
+		display: flex
+	&-info
+		flex-basis: 55%
+		color: $black
+	&-title
+		max-width: 515px
+		margin-bottom: 44px
+		font-size: 22px
+		line-height: 33px
+	&-subtitle
+		margin-bottom: 103px
+		font-size: 16px
+	&-list
+		max-width: 446px
+		font-size: 18px
+		list-style-type: none
+		&__item
+			position: relative
+			padding-left: 16px
+			margin-bottom: 40px
+			&:before
+				content: ""
+				position: absolute
+				top: -6px
+				left: -50px
+				width: 35px
+				height: 35px
+				padding-top: 5px
+				border: 2px solid $black
+				border-radius: 50%
+				text-align: center
+			&:nth-child(1):before
+				content: "1."
+			&:nth-child(2):before
+				content: "2."
+			&:nth-child(3):before
+				content: "3."
+				top: 0
+			&:nth-child(4):before
+				content: "4."
+	&-form
+		flex-basis: 45%
+		padding-top: 16px
+		padding-left: 134px
+		.modal-form
+			&__title
+				width: 336px
+				font-size: 21px
+		form
+			text-align: center
+		.form__footer
+			justify-content: center
+			&-contacts
+				margin-right: 0
+				&:before
+					content: none
+		.modal-button
+			margin: 15px auto 30px auto
