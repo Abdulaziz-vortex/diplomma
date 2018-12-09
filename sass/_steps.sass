@@ -1,0 +1,43 @@
+.steps
+	padding-top: 134px
+	.section-title
+		max-width: 651px
+		color: $black
+		font-size: 29px
+		&_center
+			margin-bottom: 50px
+	.section-subtitle
+		margin-bottom: 68px
+	&-list
+		display: flex
+		justify-content: space-between
+		padding: 0
+		list-style-type: none
+		&__item
+			position: relative
+			width: 220px
+			&:after
+				content: url("../img/steps/steps-arrow.png")
+				position: absolute
+				display: block
+				right: 0
+				top: 0
+			&:last-child
+				&:after
+					content: none
+	&-info
+		display: flex
+		flex-direction: column
+		position: relative
+		align-items: center
+		max-width: 149px
+		text-align: center
+		&__icon
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 100px
+			height: 100px
+			margin-bottom: 30px
+			border: 3px solid $primary-color
+			border-radius: 50%

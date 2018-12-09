@@ -1,3 +1,5 @@
+new WOW().init();
+
 $(document).ready(function () {
 	$('#button-callback').on('click', function() {
 		$('#modal-callback').toggleClass('modal_visible')
