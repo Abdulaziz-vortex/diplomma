@@ -981,6 +981,23 @@ template {
   text-align: center;
 }
 
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 55%;
+  -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
+  min-height: 640px;
+}
+
 .modal {
   position: fixed;
   left: 0;
