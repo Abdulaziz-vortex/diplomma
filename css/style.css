@@ -1008,6 +1008,7 @@ template {
   -ms-flex-preferred-size: 55%;
       flex-basis: 55%;
   height: 640px;
+  overflow: hidden;
 }
 
 .contacts-list {
@@ -1412,11 +1413,17 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 25px;
+    padding-top: 20px;
     padding-left: 0;
+  }
+  .footer-contacts__title {
+    margin-bottom: 20px;
   }
   .footer .contacts-list {
     padding: 0;
+  }
+  .footer .contacts-list__item {
+    margin-bottom: 20px;
   }
 }
 
