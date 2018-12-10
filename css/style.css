@@ -981,6 +981,96 @@ template {
   text-align: center;
 }
 
+.advantages {
+  padding: 84px 0 87px 0;
+}
+
+.advantages-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  color: #000;
+  font-size: 16px;
+  line-height: 23px;
+  list-style-type: none;
+}
+
+.advantages-list__item {
+  max-width: 370px;
+  height: 410px;
+  padding: 27px 0 0 26px;
+  margin-bottom: 30px;
+  background: #f7f7f7 url("../img/advantages/advantages-1.png") bottom no-repeat;
+}
+
+.advantages-list__item:first-child {
+  padding-right: 85px;
+}
+
+.advantages-list__item:first-child .advantages-descr {
+  max-width: 259px;
+}
+
+.advantages-list__item:nth-child(2) {
+  margin: 0 30px;
+  background: #f7f7f7 url("../img/advantages/advantages-2.png") bottom no-repeat;
+}
+
+.advantages-list__item:nth-child(3) {
+  background: #f7f7f7 url("../img/advantages/advantages-3.png") bottom no-repeat;
+}
+
+.advantages-bold {
+  font-family: "Museo Sans Bold",sans-serif;
+}
+
+.warranty {
+  padding-bottom: 220px;
+}
+
+.warranty .section-title {
+  max-width: 644px;
+  color: #000;
+}
+
+.warranty-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  list-style-type: none;
+}
+
+.warranty-list__item {
+  width: 270px;
+  margin: 0 60px;
+}
+
+.warranty-img {
+  width: 270px;
+  height: 360px;
+  margin-bottom: 41px;
+  border: 20px solid #f5f5f5;
+  overflow: hidden;
+}
+
+.warranty-descr {
+  text-align: center;
+  font-size: 17px;
+  line-height: 24px;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;

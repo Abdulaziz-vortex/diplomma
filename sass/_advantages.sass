@@ -1,0 +1,28 @@
+.advantages
+	padding: 84px 0 87px 0
+	&-list
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		padding: 0
+		color: $black
+		font-size: 16px
+		line-height: 23px
+		list-style-type: none
+		&__item
+			max-width: 370px
+			height: 410px
+			padding: 27px 0 0 26px
+			margin-bottom: 30px
+			background: $modal-block-bg url("../img/advantages/advantages-1.png") bottom no-repeat
+			&:first-child
+				padding-right: 85px
+				.advantages-descr
+					max-width: 259px
+			&:nth-child(2)
+				margin: 0 30px
+				background: $modal-block-bg url("../img/advantages/advantages-2.png") bottom no-repeat
+			&:nth-child(3)
+				background: $modal-block-bg url("../img/advantages/advantages-3.png") bottom no-repeat
+	&-bold
+		+bold
