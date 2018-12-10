@@ -2,6 +2,11 @@
 	.main
 		&-image
 			transform: none
+	.footer
+		&-contacts
+			flex-basis: 45%
+		.map
+			flex-basis: 55%
 @media (max-width: 1199px)
 	.container
 		width: 970px
@@ -89,6 +94,19 @@
 			.modal-input,
 			.modal-button
 				width: 100%
+	.footer
+		flex-direction: column
+		.map
+			flex-basis: 100%
+			height: 400px  
+		&-contacts
+			display: flex
+			flex-direction: column
+			align-items: center
+			padding-top: 25px
+			padding-left: 0
+		.contacts-list
+			padding: 0
 @media (max-width: 768px)
 	.hidden-xs
 		display: none

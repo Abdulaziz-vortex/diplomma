@@ -988,14 +988,64 @@ template {
   position: relative;
 }
 
+.footer-contacts {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  padding-top: 70px;
+  padding-left: 134px;
+}
+
+.footer-contacts__title {
+  max-width: 310px;
+  margin-bottom: 87px;
+  color: #000;
+  font-family: "Museo Sans Bold",sans-serif;
+  font-size: 22px;
+  line-height: 33px;
+}
+
 .map {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 55%;
   -ms-flex-preferred-size: 55%;
       flex-basis: 55%;
-  min-height: 640px;
+  height: 640px;
+}
+
+.contacts-list {
+  list-style-type: none;
+  color: #000;
+  font-size: 16px;
+}
+
+.contacts-list__item {
+  position: relative;
+  max-width: 146px;
+  margin-bottom: 32px;
+  line-height: 26px;
+}
+
+.contacts-list__item:before {
+  content: url("../img/footer/contacts-icon-1.png");
+  display: block;
+  position: absolute;
+  left: -41px;
+  top: 5px;
+}
+
+.contacts-list__item:nth-child(2):before {
+  content: url("../img/footer/contacts-icon-2.png");
+}
+
+.contacts-list__item:nth-child(3):before {
+  content: url("../img/footer/contacts-icon-3.png");
+}
+
+.contacts-list__item .contacts-descr {
+  font-family: "Museo Sans Bold",sans-serif;
+}
+
+.contacts-list__item .contacts-descr a {
+  color: #000;
+  text-decoration: none;
 }
 
 .modal {
@@ -1218,6 +1268,14 @@ img {
     -webkit-transform: none;
             transform: none;
   }
+  .footer-contacts {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+  .footer .map {
+    -ms-flex-preferred-size: 55%;
+        flex-basis: 55%;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -1331,6 +1389,34 @@ img {
   .calculation-form .modal-input,
   .calculation-form .modal-button {
     width: 100%;
+  }
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .map {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    height: 400px;
+  }
+  .footer-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 25px;
+    padding-left: 0;
+  }
+  .footer .contacts-list {
+    padding: 0;
   }
 }
 
