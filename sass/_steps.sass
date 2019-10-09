@@ -1,5 +1,5 @@
 .steps
-	padding-top: 134px
+	padding: 134px 0 72px 0
 	.section-title
 		max-width: 651px
 		color: $black
@@ -10,19 +10,24 @@
 		margin-bottom: 68px
 	&-list
 		display: flex
-		justify-content: space-between
-		padding: 0
+		flex-wrap: wrap
+		justify-content: center
+		padding: 0 48.5px
 		list-style-type: none
 		&__item
 			position: relative
-			width: 220px
+			width: 226px
 			&:after
 				content: url("../img/steps/steps-arrow.png")
 				position: absolute
 				display: block
 				right: 0
 				top: 0
+			&:first-child
+				.steps-info__text
+					width: 147px
 			&:last-child
+				width: 128px
 				&:after
 					content: none
 	&-info

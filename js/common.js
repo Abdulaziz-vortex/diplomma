@@ -1,6 +1,6 @@
 new WOW().init();
 
-$(document).ready(function () {
+$(document).ready(function() {
 	$('#button-callback').on('click', function() {
 		$('#modal-callback').toggleClass('modal_visible')
 	});
@@ -45,7 +45,7 @@ $(document).ready(function () {
 		event.preventDefault();
 		$.ajax({
 			type: "POST",
-			url: "/mailer/smart.php",
+			url: "./mailer/smart.php",
 			data: $(this).serialize(),
 		}).done(function() {
 				$(this).find("input").val("");
@@ -54,13 +54,8 @@ $(document).ready(function () {
 			});
 		return false;
 	});
+	
+	/*Маска ввода телефона*/
+	$(".input-tel").mask("+7(999)999-9999");
 
 }); /* end document */
-
-
-/*
-.done(function() {
-			$(this).find("input").val("");
-			alert("Ваша заявка принята");
-			$(".js-ajax").trigger("reset");
-		});*/
